@@ -1,26 +1,25 @@
 # Spotify-Streams-statistics
-Этот код загружает данные из CSV-файла, предполагая, что файл находится в указанном пути, а затем строит столбчатую диаграмму для колонки "Spotify Streams". Вот краткое описание каждого шага:
+This code loads data from a CSV file, assuming the file is in the specified path, and then builds a bar chart for the "Spotify Streams" column. Here's a brief description of each step:
 
-Импорт библиотек:
+1. Importing libraries:
+   - `pandas` for working with data in the form of a DataFrame.
+   - `numpy` for working with numeric data.
+   - `matplotlib.pyplot` for plotting.
 
-pandas для работы с данными в виде DataFrame.
-numpy для работы с числовыми данными.
-matplotlib.pyplot для построения графиков.
-Загрузка данных из CSV-файла в DataFrame (df):
+2. Loading data from a CSV file into a DataFrame (`df`):
+   - Path to file: `'C:\Users\vovot\Downloads\spotif\spoti2024.csv'`.
+   - 'latin1' encoding is used.
 
-Путь к файлу: 'C:\Users\vovot\Downloads\spotif\spoti2024.csv'.
-Используется кодировка 'latin1'.
-Преобразование столбца 'Spotify Streams' в числовой формат:
+3. Convert 'Spotify Streams' column to number format:
+   - This is done to ensure that the data in this column is a number.
 
-Это делается для того, чтобы удостовериться, что данные в этом столбце являются числами.
-Сортировка DataFrame по столбцу 'Spotify Streams' в порядке убывания:
+4. Sort DataFrame by 'Spotify Streams' column in descending order:
+   - This creates a new DataFrame `sorted_df` sorted by number of Spotify plays.
+5. Building a bar chart:
+   - Uses DataFrame's `plot` method to plot the graph.
+   - `kind='bar'` specifies the type of graph (bar chart).
+   - Adding labels to axes and a graph title.
 
-Это создает новый DataFrame sorted_df, отсортированный по количеству прослушиваний в Spotify.
-Построение столбчатой диаграммы:
+6. Displaying a graph using `plt.show()`.
 
-Используется метод plot DataFrame для построения графика.
-kind='bar' указывает тип графика (столбчатая диаграмма).
-Добавление подписей к осям и заголовка графика.
-Отображение графика с помощью plt.show().
-
-Если у вас возникли какие-либо вопросы по конкретным строкам кода, не стесняйтесь спрашивать!
+If you have any questions about specific lines of code, don't hesitate to ask!
